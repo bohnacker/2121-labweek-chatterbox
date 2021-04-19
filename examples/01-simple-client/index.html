@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>simple-message-client</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./lib/jquery-3.6.0.min.js"></script>
+  <script src="./base-url.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1> 
+      Simple Message Client
+    </h1>
+  </header>
+
+  <main>
+    <p>Channel:</p>
+    <input id="channel" type="text" maxlength="200" placeholder="Your channel">
+
+    <p>Add a new message:</p>
+    <form>
+      <input id="message" type="text" maxlength="200" placeholder="Your message">
+      <button type="submit">Submit</button>
+    </form>
+
+    <p>Messages:</p>
+    <section class="messages">
+      <ul id="messages">
+      </ul>
+    </section>
+
+    <!-- <p><a href="/clear">Clear</a></p> -->
+
+  </main>
+
+  <script src="./client.js"></script>
+</body>
+
+</html>
