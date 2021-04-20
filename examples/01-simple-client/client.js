@@ -20,7 +20,7 @@ $('form').submit(function (event) {
   let message = $('input#message').val();
 
   // prepare values for sending it to the server. '.param' creates a serialized string representation from an object.
-  let submitURL = baseURL + '/' + channel + '?' + $.param({ message: message });
+  let submitURL = baseURL + channel + '?' + $.param({ message: message });
   console.log(submitURL);
 
   // send the data to the server. 
@@ -40,7 +40,7 @@ $('form').submit(function (event) {
 // loads all entries from the database and creates list items in the html document
 function loadMessages() {
   let channel = $('input#channel').val();
-  $.get(baseURL + '/' + channel, function (messages) {
+  $.get(baseURL + channel, function (messages) {
     // console.log(messages);
 
     // clear list when the data is loaded from the server
