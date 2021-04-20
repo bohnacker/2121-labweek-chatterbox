@@ -37,7 +37,7 @@ $.post(submitURL, function () {
 These messages get stored by channel in a simple json database and can be retreived this way:
 
 ```javascript
-let channel = "my-channel;
+let channel = "my-channel";
 
 // get messages from the server
 $.get(baseURL + channel, function (messages) {
