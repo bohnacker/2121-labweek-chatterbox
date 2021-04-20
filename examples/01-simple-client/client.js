@@ -11,6 +11,14 @@ setInterval(() => {
 }, 1000);
 
 
+// button to clear one channel
+$('#clear-button').click(() => {
+  let channel = $('input#channel').val();
+  let submitURL = baseURL + channel + "/clear";
+  $.get(submitURL);
+});
+
+
 // attach an event handler for pressing the submit button
 $('form').submit(function (event) {
   event.preventDefault();
