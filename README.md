@@ -24,24 +24,24 @@ In the examples we're using jQuery to post and get messages.
 You can post messages to the serve in the form `https://some.server.url/my-channel?message=hello`. With jQuery this could be done this way:
 
 ```javascript
-  let channel = "my-channel";
-  let message = "hello";
-  let submitURL = baseURL + channel + '?' + $.param({ message: message });
+let channel = "my-channel";
+let message = "hello";
+let submitURL = baseURL + channel + '?' + $.param({ message: message });
 
-  // send the data to the server. 
-  $.post(submitURL, function () {
-    // this function will be called on success
-  });
+// send the data to the server. 
+$.post(submitURL, function () {
+  // this function will be called on success
+});
 ``` 
 
 These messages get stored by channel in a simple json database and can be retreived this way:
 
 ```javascript
-  let channel = "my-channel;
+let channel = "my-channel;
 
-  // get messages from the server
-  $.get(baseURL + channel, function (messages) {
-    // messages is an array of all the messages in that channel
-    console.log(messages);
-  });
+// get messages from the server
+$.get(baseURL + channel, function (messages) {
+  // messages is an array of all the messages in that channel
+  console.log(messages);
+});
 ```
