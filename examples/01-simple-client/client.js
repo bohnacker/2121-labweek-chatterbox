@@ -1,7 +1,7 @@
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! //
 // You need to create the file 'base-url.js' in this folder       //
 // with the content (replace some.server.url with your server):   //
-// const baseURL="https://some.server.url"                       //   
+// const baseURL="https://some.server.url"                        //   
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! //
 
 
