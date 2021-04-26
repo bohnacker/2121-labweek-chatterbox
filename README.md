@@ -45,3 +45,17 @@ $.get(baseURL + channel, function (messages) {
   console.log(messages);
 });
 ```
+
+To delete messages you can either delete all messages from one channel...
+
+```javascript
+$.get(baseURL + "my-channel/clear");
+```
+
+... or delete messages that fit specific key/value pairs. The following will delete all messages with the id "abcde" in the channel "my-channel":
+
+```javascript
+let channel = "my-channel";
+let submitURL = baseURL + channel + '/delete?' + $.param({ id: "abcde" });
+$.get(submitURL);
+```
