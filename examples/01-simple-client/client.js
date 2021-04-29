@@ -1,7 +1,7 @@
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! //
 // You need to create the file 'base-url.js' in this folder       //
 // with the content (replace some.server.url with your server):   //
-// const baseURL="https://some.server.url"                       //   
+// const baseURL="https://some.server.url"                        //   
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! //
 
 
@@ -25,10 +25,11 @@ $('form').submit(function (event) {
 
   // get values from the input fields
   let channel = $('input#channel').val();
+  let user = $('input#user').val();
   let message = $('input#message').val();
 
   // prepare values for sending it to the server. '.param' creates a serialized string representation from an object.
-  let submitURL = baseURL + channel + '?' + $.param({ message: message });
+  let submitURL = baseURL + channel + '?' + $.param({ user: user, message: message });
   console.log(submitURL);
 
   // send the data to the server. 
