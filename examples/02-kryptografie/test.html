@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>test</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <p id="demo">Click the button to change the text in this paragraph.</p>
+
+        <button onclick="encrypt()">Encrypt</button>
+
+
+        <!-- NOCH EINZUBINDEN!! -->
+
+
+        <script>
+            // get the value of the displayd string
+            var str = document.getElementById("demo").innerHTML.toLowerCase().split('');
+            // reference Array with all letters of the alphabet
+            var abc = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+            // empty array
+            var res = [];
+
+            function encrypt() {
+                // loops through the single leters of the string
+                for(var i=0; i<=str.length; i++){
+                    // checking for the position of the letter in abc 
+                    var num = abc.indexOf(str[i]) + 1;
+                    // push number to result Array
+                    res.push(num);
+                }
+
+                // changes the value of the shown paragraph
+                document.getElementById("demo").innerHTML = res;
+            }
+        </script>
+    </body>
+
+</html>
