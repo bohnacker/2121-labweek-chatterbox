@@ -105,3 +105,6 @@ dist
 
 # Base URL for server access
 base-url.js
+
+# Mac Finder information
+.DS-Store
