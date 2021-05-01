@@ -107,4 +107,4 @@ dist
 base-url.js
 
 # Mac Finder information
-.DS-Store
+.DS_Store
