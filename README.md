@@ -40,7 +40,7 @@ All messages will be given a unique id and a timestamp by the server.
 
 ### Getting messages
 
-These messages get stored by channel in a simple json database and can be retreived this way:
+These messages get stored by channel in a simple json database and can be retreived with get commands like `https://some.server.url/my-channel`.
 
 ```javascript
 let channel = "my-channel";
@@ -52,7 +52,8 @@ $.get(baseURL + channel, function (messages) {
 });
 ```
 
-If you only need new messages since a certain timestamp:
+If you only need new messages since a certain timestamp: 
+`https://some.server.url/my-channel?since=123456789`.
 
 ```javascript
 let lastMessageTime = 123456789;
@@ -62,6 +63,10 @@ $.get(baseURL + "my-channel?since=" + lastMessageTime, function (messages) {
   console.log(messages);
 });
 ```
+
+You can also request messages matching certain key value pairs: 
+`https://some.server.url/my-channel?index=13` will send you all messages in the channel `my-channel` where the value of the property index is 13.  
+
 
 ### Deleting messages
 
