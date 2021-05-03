@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<!-- im head werden alle wichtigen Dateien verlinkt und grundlegende Einstellungen festgelegt -->
+<head>
+  <title>simple-message-client</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./lib/jquery-3.6.0.min.js"></script>
+  <script src="./base-url.js"></script>
+</head>
+
+<!-- der Body ist der Hauptteil des Codes -->
+<body>
+  <textarea id="textarea"></textarea>
+  <button id="send-button">Send my message!</button>
+  
+  <button id="request-button">Show all messages!</button>
+
+  <!-- hier wird das JavaScript-file eingebunden. -->
+  <!-- Das kann nicht im head passieren, da es erst geladen werden darf, wenn die HTML-Elemente da sind. -->
+  <!-- Sonst könnten gewisse Funktionen nicht ausgeführt werden -->
+  <script src="./client.js"></script>
+</body>
+
+</html>
