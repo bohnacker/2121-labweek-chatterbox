@@ -65,8 +65,15 @@ $.get(baseURL + "my-channel?since=" + lastMessageTime, function (messages) {
 ```
 
 You can also request messages matching certain key value pairs: 
-`https://some.server.url/my-channel?index=13` will send you all messages in the channel `my-channel` where the value of the property index is 13.  
+`https://some.server.url/my-channel?index=13` will send you all messages in the channel `my-channel` where the value of the property index is 13. In the script it will look like this:
 
+```javascript
+let channel = "my-channel";
+$.get(baseURL + channel + '?' + $.param({ index: 13 }), function (messages) {
+  // messages will contain all messages newer than the given timestamp
+  console.log(messages);
+});
+```
 
 ### Deleting messages
 
